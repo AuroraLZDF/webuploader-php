@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebUploader Demo</title>
+    <link rel="stylesheet" href="./static/webuploader.css">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+<div class="webuploader-container">
+    <input type="hidden" name="images" value="">
+    <div id="uploader" class="wu-example">
+        <div id="dndArea" class="placeholder">
+            <div id="filePicker"></div>
+        </div>
+        <div class="queueList">
+
+        </div>
+        <div class="statusBar" style="display:none;">
+            <div class="progress">
+                <span class="text">0%</span>
+                <span class="percentage"></span>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script type="text/javascript" src="./static/jquery.min.js"></script>
+<script type="text/javascript" src="./static/webuploader.min.js"></script>
+<script type="text/javascript">
+    var upload_url = 'server/upload.php',
+    csrf_token = 'hfRYWznUbENpHuShdtWmd0pw=',
+    input_val = $('input[name="images"]'),
+    fileNumLimit = 1;
+</script>
+<script type="text/javascript" src="./static/config.js"></script>
+</body>
+</html>
